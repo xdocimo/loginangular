@@ -1,0 +1,11 @@
+<form (ngSubmit)="contacto()" [formGroup]="miForm">
+    <h2 class="sr-only">Form de Contacto</h2>
+    <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+    <div class="form-group"><input class="form-control" formControlName="email" type="email" name="email"       [(ngModel)]="email"        placeholder="Correo electrónico"></div><p *ngIf="campoValido('email')">Mail invalido >:(</p><br>
+    <div class="form-group"><input class="form-control" formControlName="name" type="text" name="name"       [(ngModel)]="name"        placeholder="Introduce tu nombre"></div><p *ngIf="campoValido('name')">Name invalido >:(</p><br>
+    <div class="form-group"><input class="form-control" formControlName="message" type="text"  [(ngModel)]="message"  placeholder="Introduce tu message"></div><p *ngIf="campoValido('message')">Mensaje invalido >:(</p><br>
+    1 <div class="form-group"><input class="form-control" formControlName="rating" type="range" min="1" max="5"  [(ngModel)]="rating"  placeholder="Introduce tu calificacion"> 5</div>
+    <div class="form-group"><button class="btn btn-primary btn-block" [disabled]="miForm.invalid">Contactarse</button></div>
+
+    {{name}}
+  </form>

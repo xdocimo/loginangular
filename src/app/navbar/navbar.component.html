@@ -1,0 +1,5 @@
+
+<div class="userbox-guest" *ngIf="!latIng"><p>Hola Invitado! Por favor <a href="/login">Inicia sesión</a> o <a href="/register">Registrate</a></p></div>
+<div class="userbox-user" *ngIf="latIng"><p>Bienvenido! Usuario <img height="25px" width="25px" style="    border:1px solid red;    border-radius:70%; margin: 2px"src="https://i.pinimg.com/736x/38/47/9c/38479c637a4ef9c5ced95ca66ffa2f41.jpg">{{latIng.email}}- <a href="/logout">Cerrar sesión</a></p></div>
+<hr>
+<div class="home"><a href="">Inicio</a> | <a href="">Contacto</a> | <a href="">¿ Por qué no elegí otra carrera?</a></div>
